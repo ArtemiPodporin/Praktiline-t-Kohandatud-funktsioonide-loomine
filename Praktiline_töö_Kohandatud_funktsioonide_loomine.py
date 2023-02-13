@@ -1,5 +1,6 @@
 from math import *
 from random import *
+from re import A
 from OmaModul import *
 
 #12
@@ -31,7 +32,7 @@ def is_year_leap(aasta):
     if aasta % 4 == 0:
         if aasta % 100 == 0:
             if aasta % 400 == 0:
-                return True
+                return True         
             else:
                 return False
         else:
@@ -47,6 +48,15 @@ def square(side):
     diagonal = math.sqrt(2 * side * side)
     return perimeter, area, diagonal
 
+#3.2
+def squart(a:float)->int:
+    """
+    """
+    p=a*4
+    s=a*a 
+    d=(a**2)/2
+    return p,s,d
+
 
 #4
 def season(month):
@@ -61,7 +71,18 @@ def season(month):
     else:
         return "Invalid month number"
 #5
+def bank(b:float, aa:int)->float:
+    """
+    """
+    for i in range(aa):
+        b=b+b*0.1
+    return b
 
+#5.2
+def bank(a, years):
+    for i in range(years):
+        a *= 1.1
+    return a
 
 
 #6
